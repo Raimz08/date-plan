@@ -1,0 +1,64 @@
+let currentStep = 1;
+        const totalSteps = 5;
+        
+        // Step navigation
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentStep < totalSteps) {
+                document.querySelector(`[data-step="${currentStep}"]`).classList.remove('active');
+                currentStep++;
+                document.querySelector(`[data-step="${currentStep}"]`).classList.add('active');
+                updateProgress();
+                document.getElementById('prevBtn').disabled = false;
+                if (currentStep === totalSteps) document.getElementById('nextBtn').textContent = '🏁 Finish!';
+            }
+        });
+        
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentStep > 1) {
+                document.querySelector(`[data-step="${currentStep}"]`).classList.remove('active');
+                currentStep--;
+                document.querySelector(`[data-step="${currentStep}"]`).classList.add('active');
+                updateProgress();
+                document.getElementById('nextBtn').textContent = 'Next Step ➡️';
+                if (currentStep === 1) document.getElementById('prevBtn').disabled = true;
+            }
+        });
+        
+        function updateProgress() {
+            document.getElementById('currentStep').textContent = currentStep;
+        }
+        
+        // Option selection
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', () => {
+                option.classList.toggle('selected');
+            });
+        });
+        
+        // Task checkboxes
+        document.querySelectorAll('.checkbox-custom').forEach(cb => {
+            cb.addEventListener('change', (e) => {
+                const step = e.target.closest('.step');
+                if (e.target.checked) {
+                    step.querySelector('.step-header').classList.add('completed');
+                } else {
+                    step.querySelector('.step-header').classList.remove('completed');
+                }
+            });
+        });
+        
+        // Customize button (placeholder for more interactivity)
+        document.getElementById('customizeBtn').addEventListener('click', () => {
+            alert('✨ Your selected options will be highlighted in your personal plan! Feel free to mix & match 💕');
+        });
+        
+        // Print/Save
+        document.getElementById('printBtn').addEventListener('click', () => {
+            window.print();
+        });
+        
+        // Auto-animate steps on load
+        setTimeout(() => {
+            document.querySelector('[data-step="1"]').style.opacity = '1';
+            document.querySelector('[data-step="1"]').style.transform = 'translateY(0)';
+        }, 500);
