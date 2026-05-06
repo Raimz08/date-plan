@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Simple Sweet Teen-Friendly Romantic Date Planner</title>
+    <link rel="stylesheet" href="plan.css">
+</head>
+<body>
+    <h1>💕 Simple, Sweet, &amp; Teen-Friendly Romantic Date Plan</h1>
+    <p class="subtitle">A calm vibe, a bit romantic, but still totally safe. ✨</p>
+    
+    <div id="progress">Step <span id="currentStep">0</span> of 5</div>
+    
+    <div class="step active" data-step="1">
+        <div class="step-header">
+            <span class="step-icon">🌅</span>
+            1. Meet Somewhere Calm &amp; Public
+        </div>
+        <div class="step-content">
+            <p>Choose a place where to date:</p>
+            <div class="options">
+                <div class="option" data-option="cafe">SM Taytay ☕</div>
+                <div class="option" data-option="park">MegaMall 🌳</div>
+                <div class="option" data-option="mall">Kapehingahan 🛍️</div>
+            </div>
+            <div class="tip">Tip: Be ready before 4 pm HEHE iloveyou 🌇</div>
+            <label><input type="checkbox" class="checkbox-custom" data-task="meet"> Done! ✅</label>
+        </div>
+    </div>
+    
+    <div class="step" data-step="2">
+        <div class="step-header">
+            <span class="step-icon">🌸</span>
+            2. What should we do first
+        </div>
+        <div class="step-content">
+            <p>Bring something simple and sweet:</p>
+            <div class="options">
+                <div class="option" data-option="snack"> Eat </div>
+                <div class="option" data-option="flower"> Take a picture </div>
+                <div class="option" data-option="note"> </div>
+            </div>
+            <label><input type="checkbox" class="checkbox-custom" data-task="icebreaker"> Done! ✅</label>
+        </div>
+    </div>
+    
+    <div class="step" data-step="3">
+        <div class="step-header">
+            <span class="step-icon">🍦</span>
+            3. Light Activity (20–30 mins)
+        </div>
+        <div class="step-content">
+            <p>Choose something to talk and laugh:</p>
+            <div class="options">
+                <div class="option" data-option="icecream">Ice cream/milk tea 🍦</div>
+                <div class="option" data-option="walk">Park/mall walk 🚶</div>
+                <div class="option" data-option="bookstore">Browse bookstore 📚</div>
+            </div>
+            <label><input type="checkbox" class="checkbox-custom" data-task="light"> Done! ✅</label>
+        </div>
+    </div>
+    
+    <div class="step" data-step="4">
+        <div class="step-header">
+            <span class="step-icon">💖</span>
+            4. Main Romantic Activity (45–60 mins)
+        </div>
+        <div class="step-content">
+            <p>Choose your style:</p>
+            <div class="options">
+                <div class="option" data-option="cafe">A: Share dessert + "Would you rather?" ☕</div>
+                <div class="option" data-option="sunset">B: Sunset walk + aesthetic photos 🌅</div>
+                <div class="option" data-option="bookstore2">C: Pick book that "reminds you of them" 📖</div>
+                <div class="option" data-option="arcade">D: Arcade playdate 🎮</div>
+            </div>
+            <label><input type="checkbox" class="checkbox-custom" data-task="main"> Done! ✅</label>
+        </div>
+    </div>
+    
+    <div class="step" data-step="5">
+        <div class="step-header">
+            <span class="step-icon">🌙</span>
+            5. Sweet &amp; Safe Ending
+        </div>
+        <div class="step-content">
+            <p>Keep it romantic but gentle:</p>
+            <ul style="margin: 15px 0; padding-left: 20px;">
+                <li>"I had a really nice time with you." 💕</li>
+                <li>"We should hang out again soon." 😊</li>
+                <li>Give note/flower if you didn’t earlier 🌸</li>
+            </ul>
+            <label><input type="checkbox" class="checkbox-custom" data-task="ending"> Done! ✅</label>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 40px;">
+        <button id="nextBtn">Next Step ➡️</button>
+        <button id="prevBtn" disabled>⬅️ Previous</button>
+        <br>
+        <button id="customizeBtn">✨ Customize My Plan</button>
+        <button id="printBtn">🖨️ Print/Save Plan</button>
+    </div>
+
+    <script src="date.js"></script>
+</body>
+</html>
+
